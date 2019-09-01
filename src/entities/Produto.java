@@ -25,11 +25,12 @@ public class Produto {
 		this.preco = preco;
 	}
 
-	//referencia por metodo estatico
-	public static void staticUpdatePreco(Produto p) {
-		p.setPreco(p.getPreco()*1.1);
+	//referencia por metodo NÃO estatico
+	public void nonStaticUpdatePreco() {
+		setPreco(getPreco()*1.1);
 		
 	}
+	
 	
 	@Override
 	public String toString() {

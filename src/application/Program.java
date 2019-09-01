@@ -18,7 +18,7 @@ public class Program {
 		lista.add(new Produto("Tablet", 350.00));
 		lista.add(new Produto("HD Case", 80.90));
 		
-		lista.forEach(Produto::staticUpdatePreco);
+		lista.forEach(Produto::nonStaticUpdatePreco);
 
 		//imprimir lista usando for each
 		lista.forEach(System.out::println);

@@ -21,12 +21,9 @@ public class Program {
 		//variavel que poderia ser alterada para ser o multiplicado de preco
 		
 		double factor = 1.1;
-		//utilizando expressao lambda declarada
-		Consumer<Produto>cons = p-> {
-			p.setPreco(p.getPreco()*factor);
-		};
 		
-		lista.forEach(cons);
+		//expressao lambda inline
+		lista.forEach(p->p.setPreco(p.getPreco()*factor));
 
 		//imprimir lista usando for each
 		lista.forEach(System.out::println);

@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Locale;
 
 import entities.Produto;
-import util.updatePreco;
 
 public class Program {
 
@@ -19,8 +18,7 @@ public class Program {
 		lista.add(new Produto("Tablet", 350.00));
 		lista.add(new Produto("HD Case", 80.90));
 		
-		//percorre a lista passando o metodo de aumento de preco
-		lista.forEach(new updatePreco());
+		lista.forEach(Produto::staticUpdatePreco);
 
 		//imprimir lista usando for each
 		lista.forEach(System.out::println);

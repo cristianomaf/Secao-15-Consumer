@@ -25,10 +25,17 @@ public class Produto {
 		this.preco = preco;
 	}
 
+	//referencia por metodo estatico
+	public static void staticUpdatePreco(Produto p) {
+		p.setPreco(p.getPreco()*1.1);
+		
+	}
+	
 	@Override
 	public String toString() {
 		return "Produto [nome=" + nome + ", preco=" +String.format("%.2f", preco) + "]";
 	}
+	
 	
 	
 	
